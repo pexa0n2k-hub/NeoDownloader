@@ -1,6 +1,6 @@
 {
-  "name": "NeoDownloader",
-  "short_name": "NeoDownloader",
+  "name": "NeoDownloader V1.3",
+  "short_name": "NeoDownloader V1.3",
   "description": "Gestor de descargas Neo",
   "start_url": "./",
   "scope": "./",
