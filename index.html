@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+<title>NeoDownload</title>
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">↓</div><div><b>NeoDownload</b><small>Download manager</small></div></div>
+  <button class="icon-btn" id="settingsBtn" aria-label="Ajustes">⚙</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">DESCARGAS ACTIVAS</div>
+    <div class="hero-number" id="activeCount">0</div>
+    <div class="hero-sub" id="heroStatus">Todo listo para descargar</div>
+    <div class="hero-glow"></div>
+  </section>
+  <section class="add-card">
+    <div class="section-heading"><span class="round-icon">↗</span><div><b>Nueva descarga</b><small>Pega un enlace directo al archivo</small></div></div>
+    <input id="urlInput" type="url" inputmode="url" placeholder="https://sitio.com/archivo.zip">
+    <div class="input-row">
+      <input id="nameInput" type="text" placeholder="Nombre (opcional)">
+      <button class="primary-btn" id="addBtn">＋ Descargar</button>
+    </div>
+    <p class="hint">Tip: algunos sitios bloquean descargas externas. Usa enlaces directos y públicos.</p>
+  </section>
+  <section class="section">
+    <div class="section-heading between"><div><b>Actividad</b><small>Tu cola y archivos recientes</small></div><button class="text-btn" id="clearBtn">Limpiar historial</button></div>
+    <div id="downloads" class="downloads"></div>
+    <div id="emptyState" class="empty"><div class="empty-icon">↓</div><b>Aún no hay descargas</b><span>Agrega un enlace para comenzar.</span></div>
+  </section>
+</main>
+<nav class="bottom-nav">
+  <button class="nav-item active" data-tab="home"><span>⌂</span><small>Inicio</small></button>
+  <button class="nav-item" data-tab="queue"><span>☷</span><small>Cola</small></button>
+  <button class="nav-item" data-tab="files"><span>▣</span><small>Archivos</small></button>
+  <button class="nav-item" data-tab="history"><span>◷</span><small>Historial</small></button>
+</nav>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
